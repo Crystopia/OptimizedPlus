@@ -1,6 +1,6 @@
 # Optimized +
 
-Read more at (Crystopia/OptimizedPlus)[https://github.com/Crystopia/OptimizedPlus?tab=readme-ov-file] or at [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus)
+Read more at [Crystopia/OptimizedPlus](https://github.com/Crystopia/OptimizedPlus?tab=readme-ov-file) or at [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus)
 
 Check out the projects I'm using in my modpack!
 
