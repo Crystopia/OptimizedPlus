@@ -1,16 +1,6 @@
 # Optimized +
 
-A Minecraft Mod Pack for ``1.20.1-1.21.8``
-
-### What it do?
-
-- Fix Animation from the Resourcepack (A lot of the animations are fucked up and are fixed here)
-- Fix Rendering
-- Fix Bugs with Minecraft
-- Better and More FPS
-- Free Capes ([minecraftcapes.net](https://minecraftcapes.net/account/login))
-- Zoom and Shador (Sodium, Iris, Vanilla Zoom)
-- You can use the Pack on All Server all Mods are Good. 
+Read more at (Crystopia/OptimizedPlus)[https://github.com/Crystopia/OptimizedPlus?tab=readme-ov-file] or at [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus)
 
 Check out the projects I'm using in my modpack!
 
