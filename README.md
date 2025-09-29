@@ -1,7 +1,5 @@
 # Optimized +
 
-**Info**: This Modpack is now Optimized + and Better Crystopia is migriert.
-
 A Minecraft Mod Pack for ``1.20.1-1.21.8``
 
 ### What it do?
