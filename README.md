@@ -1,19 +1,51 @@
 # Optimized +
 
-A Minecraft Mod Pack for ``1.20.4-1.21.6``
-Download the Modpack from [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus) or checkout the branches from this repository.
+Read more at [Crystopia/OptimizedPlus](https://github.com/Crystopia/OptimizedPlus?tab=readme-ov-file) or at [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus)
 
-## Versions
-- 1.21.6 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/10.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/1.21.6) - 10.0.0
-- 1.21.5 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/9.0.0) ~~Github~~ - 9.0.0
-- 1.21.4 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/8.1.0) ~~Github~~ - 8.1.0
-- 1.21.3 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/8.0.0) ~~Github~~ - 8.0.0
-- 1.21.1 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/7.1.0) ~~Github~~ - 7.1.0
-- 1.21 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/6.0.0) ~~Github~~ - 6.0.0
-- 1.20.6 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/5.1.0) ~~Github~~ - 5.1.0
-- 1.20.6 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/5.0.0) ~~Github~~ - 5.0.0
-- 1.20.4 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/4.1.0) ~~Github~~ - 4.1.0
+Check out the projects I'm using in my modpack!
 
+- [Advancements Reloaded](https://modrinth.com/mod/tLuRLqpa) [0\.11\.1]
+- [AppleSkin](https://modrinth.com/mod/EsAfCjCV) [3\.0\.7\+mc1\.21\.9]
+- [Architectury](https://modrinth.com/mod/lhGA9TYQ) [18\.0\.6]
+- [Better Statistics Screen](https://modrinth.com/mod/n6PXGAoM) [4\.0\.0\+fabric\-1\.21\.10]
+- [BetterF3](https://modrinth.com/mod/8shC1gFX) [16\.0\.3]
+- [Bobby](https://modrinth.com/mod/M08ruV16) [5\.2\.9\+mc1\.21\.6]
+- [Capes](https://modrinth.com/mod/89Wsn8GD) [1\.5\.9\+1\.21\.9]
+- [Chat Heads](https://modrinth.com/mod/Wb5oqrBJ) [1\.1\.7]
+- [Cloth Config v20](https://modrinth.com/mod/9s6osm5g) [20\.0\.149]
+- [Collective](https://modrinth.com/mod/e0M1UDsY) [8\.13]
+- [Controlify](https://modrinth.com/mod/DOUdJVEm) [2\.4\.2\+1\.21\.10\-fabric]
+- [Dynamic FPS](https://modrinth.com/mod/LQ3K71Q1) [3\.10\.1]
+- [EntityCulling](https://modrinth.com/mod/NNAgCjsB) [1\.9\.3]
+- [Euphoria Patcher](https://modrinth.com/mod/4H6sumDB) [1\.7\.8\-r5\.6\.1\-neoforge]
+- [Fabric API](https://modrinth.com/mod/P7dR8mSH) [0\.138\.3\+1\.21\.10]
+- [Fabric Language Kotlin](https://modrinth.com/mod/Ha28R6CL) [1\.13\.7\+kotlin\.2\.2\.21]
+- [Falling Leaves](https://modrinth.com/mod/WhbRG4iK) [2\.0\.2]
+- [FancyMenu](https://modrinth.com/mod/Wq5SjeWM) [3\.8\.1]
+- [FerriteCore](https://modrinth.com/mod/uXXizFIs) [8\.0\.2]
+- [Flashback](https://modrinth.com/mod/4das1Fjq) [0\.36\.0]
+- [Forge Config API Port](https://modrinth.com/mod/ohNO6lps) [21\.10\.1]
+- [ImmediatelyFast](https://modrinth.com/mod/5ZwdcRci) [1\.13\.2\+1\.21\.10]
+- [Iris](https://modrinth.com/mod/YL57xq9U) [1\.9\.6\+mc1\.21\.9]
+- [Konkrete](https://modrinth.com/mod/J81TRJWm) [1\.9\.13]
+- [Krypton](https://modrinth.com/mod/fQEb0iXm) [0\.2\.10]
+- [Language Reload](https://modrinth.com/mod/uLbm7CG6) [1\.7\.5\+1\.21\.10]
+- [Lithium](https://modrinth.com/mod/gvQqBUqZ) [0\.20\.1\+mc1\.21\.10]
+- [Melody](https://modrinth.com/mod/CVT4pFB2) [1\.0\.14]
+- [Mod Menu](https://modrinth.com/mod/mOgUt4GM) [16\.0\.0\-rc\.1]
+- [More Chat History](https://modrinth.com/mod/8qkXwOnk) [1\.3\.1]
+- [NotEnoughAnimations](https://modrinth.com/mod/MPCX6s5C) [1\.10\.6]
+- [Polytone](https://modrinth.com/mod/3qAYkBMB) [1\.21\.7\-3\.5\.3\-alpha]
+- [Presence Footsteps](https://modrinth.com/mod/rcTfTZr3) [1\.12\.2\+1\.21\.10]
+- [Puzzle](https://modrinth.com/mod/3IuO68q1) [2\.2\.0]
+- [Simple Voice Chat](https://modrinth.com/mod/9eGKb6K1) [1\.21\.10\-2\.6\.6]
+- [Sodium](https://modrinth.com/mod/AANobbMI) [0\.7\.3\+mc1\.21\.10]
+- [Sodium Extra](https://modrinth.com/mod/PtjYWJkn) [0\.7\.1\+mc1\.21\.10]
+- [TCDCommons API](https://modrinth.com/mod/Eldc1g37) [4\.0\.1\+fabric\-1\.21\.10]
+- [Tab Grabber](https://modrinth.com/mod/AXxtKawg) [0\.6\.7\+1\.12\.6]
+- [UniLib](https://modrinth.com/mod/nT86WUER) [1\.2\.0]
+- [YetAnotherConfigLib](https://modrinth.com/mod/1eAoo2KR) [3\.8\.0\+1\.21\.9\-fabric]
+- [Zoomify](https://modrinth.com/mod/w7ThoJFB) [2\.14\.6\+1\.21\.9]
+- [spark](https://modrinth.com/mod/l6YH9Als) [1\.10\.152]
+<br>
 Thanks for Downloading! 💓
-
-[![Hosting Image](https://i.imgur.com/dVtPG3Z.png)](https://bit.ly/3WKARvD)
