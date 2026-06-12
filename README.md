@@ -6,7 +6,7 @@ Download the Modpack from [modrinth/Optimized +](https://modrinth.com/modpack/op
 
 ## Versions
 - 26.1.2 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/13.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/26.1.2) - 13.0.0
-- - 1.21.11 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/12.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/1.21.11) - 12.0.0
+- 1.21.11 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/12.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/1.21.11) - 12.0.0
 - 1.21.10 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/11.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/1.21.10) - 11.0.0
 - 1.21.6 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/10.0.0) [Github](https://github.com/Crystopia/OptimizedPlus/tree/1.21.6) - 10.0.0
 - 1.21.5 [Modrinth](https://modrinth.com/modpack/optimized-plus/version/9.0.0) ~~Github~~ - 9.0.0
