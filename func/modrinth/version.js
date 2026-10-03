@@ -10,10 +10,14 @@ export async function getFirstVersionForLoaderAndVersion(
     `${MODRINTH_API_BASE}/project/${name}/version?loaders=["${loader}"]&game_versions=["${gameVersion}"]`,
   );
   console.log(
-    `Getting Latest Mod with Id ${name}: ${MODRINTH_API_BASE}/project/${name}/version?loaders=["${loader}"]&game_versions=["${gameVersion}"]`,
+    `[MODRINTH] Getting Latest Mod with Id ${name}: ${MODRINTH_API_BASE}/project/${name}/version`,
   );
 
   if (req.status != 200) return { success: false };
+  console.log(
+    `[MODRINTH] Found latest Version of ${name} for current Minecraft Version ${gameVersion}`,
+  );
+
   const json = (await req.json())[0];
   const project = await getProject(name);
 

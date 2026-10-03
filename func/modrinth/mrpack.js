@@ -48,6 +48,11 @@ export async function createMrPackFile(fileName, json, configDir) {
       fs.readFileSync(`./data/configs/${configDir}/${file}`),
     );
   });
+
   const zipFile = await zip.generateAsync({ type: "blob" });
+
+  console.log(
+      `[MRPACK] Created a .mrpack file for ModPack.`,
+    );
   return new File(await zipFile.arrayBuffer(), fileName);
 }

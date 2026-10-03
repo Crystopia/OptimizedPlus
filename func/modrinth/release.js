@@ -39,9 +39,9 @@ export async function createModrinthRelease(apiToken, details, file) {
     body: formData,
   });
   if (req.status != 200) {
-    console.log(`Failed to create Modrinth Version Release ${req.statusText}`);
+    console.log(`[MODRINTH] Failed to create Modrinth Version Release ${req.statusText}`);
     console.log(await req.text());
   } else {
-    console.log("Create Successfully Modrinth Version Release.");
+    console.log(`[MODRINTH] Successfully created Modrinth Version. https://modrinth.com/project/${details.projectId}/version/${details.versionNumber}`);
   }
 }

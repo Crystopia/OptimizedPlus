@@ -9,7 +9,8 @@ export async function createGitHubRelease(apiToken, details, file) {
     if (release.tag_name == details.version) return true;
     else return false;
   });
-  if (hasRelease.includes(true)) return console.log("[GITHUB] Failed to create Release! Version exsits.");
+  if (hasRelease.includes(true))
+    return console.log("[GITHUB] Failed to create Release! Version exsits.");
 
   const req = await fetch(
     `${GITHUB_API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/releases`,
@@ -27,12 +28,14 @@ export async function createGitHubRelease(apiToken, details, file) {
   );
 
   if (req.status != 201) {
-    console.log(`Failed with status ${req.statusText}`);
+    console.log(`[GITHUB] Failed with status ${req.statusText}`);
   } else {
     const json = await req.json();
-    console.log(`Created Release ${json.url}`);
+    console.log(
+      `[GITHUB] Successfully created a new Release on GitHub ${json.html_url}`,
+    );
 
-    const asset = await fetch(
+    const assetReq = await fetch(
       `https://uploads.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/${json.id}/assets?name=${file.name}`,
       {
         method: "POST",
@@ -44,11 +47,11 @@ export async function createGitHubRelease(apiToken, details, file) {
       },
     );
 
-    if (asset.status != 201) {
-      console.log(`Failed to create a Release Asset! ${asset.statusText}`);
-      console.log(`Error: ${await asset.text()}`);
+    if (assetReq.status != 201) {
+      console.log(`[GITHUB] Failed to create a Release Asset! ${assetReq.statusText}`);
+      console.log(`[GITHUB] Error: ${await assetReq.text()}`);
     } else {
-      console.log(`Uploaded a release Asset!`);
+      console.log(`[GITHUB] Uploaded a Asset to the created Release!`);
     }
   }
 }
