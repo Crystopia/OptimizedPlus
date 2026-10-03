@@ -5,7 +5,10 @@ on:
   push:
     branches:
       - "*"
-jobs:    
+env: GITHUB_API_TOKEN=${{secrets.API_TOKEN}}
+  MODRINTH_API_TOKEN=${{secrets.MODRINTH_API_TOKEN}}
+
+jobs:
   build:
     name: "Release"
     runs-on: ubuntu-latest
@@ -18,17 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Export GitHub API Token
-        run: export GITHUB_API_TOKEN=${{secrets.API_TOKEN}}
-
-      - name: Export Modrith API Token
-        run: export MODRINTH_API_TOKEN=${{secrets.MODRINTH_API_TOKEN}}
-
       - name: Setup Bun Action
         uses: oven-sh/setup-bun@v2
-      
+
       - name: Install Dependencies
         run: bun install
-      
+
       - name: Run Script
         run: bun run script.js
