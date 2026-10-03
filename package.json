@@ -1,0 +1,23 @@
+{
+  "name": "optimizedplus",
+  "version": "1.0.0",
+  "description": "A Minecraft Mod Pack for ``1.20.4-1.21.10`` Read more about our  general [Mod list in this Pack](https://github.com/Crystopia/OptimizedPlus/tree/defaultData?tab=readme-ov-file). Download the Modpack from [modrinth/Optimized +](https://modrinth.com/modpack/optimized-plus) or checkout the branches from this repository.",
+  "homepage": "https://github.com/Crystopia/OptimizedPlus#readme",
+  "bugs": {
+    "url": "https://github.com/Crystopia/OptimizedPlus/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crystopia/OptimizedPlus.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "execute": "node script.js"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2"
+  }
+}
