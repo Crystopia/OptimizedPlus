@@ -5,8 +5,9 @@ on:
   push:
     branches:
       - "*"
-env: GITHUB_API_TOKEN=${{secrets.API_TOKEN}}
-  MODRINTH_API_TOKEN=${{secrets.MODRINTH_API_TOKEN}}
+env:
+  GITHUB_API_TOKEN: ${{secrets.API_TOKEN}}
+  MODRINTH_API_TOKEN: ${{secrets.MODRINTH_API_TOKEN}}
 
 jobs:
   build:
