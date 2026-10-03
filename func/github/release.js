@@ -9,7 +9,27 @@ export async function createGitHubRelease(apiToken, details, file) {
     if (release.tag_name == details.version) return true;
     else return false;
   });
-  if (hasRelease.includes(true))
+
+  if (details.deleteOld) {
+    const release = checkForReleaseJson.filter(
+      (r) => r.tag_name == details.version,
+    )[0];
+
+    if (release) {
+      const deleteReq = await fetch(
+        `${GITHUB_API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/releases/${release.id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${apiToken}`,
+          },
+        },
+      );
+      if (deleteReq.status != 204)
+        console.log(`[GITHUB] Error while delete ${await deleteReq.text()}`);
+      console.log("[GITHUB] Successfully deleted old Release.");
+    }
+  } else if (hasRelease.includes(true))
     return console.log("[GITHUB] Failed to create Release! Version exsits.");
 
   const req = await fetch(
@@ -23,6 +43,7 @@ export async function createGitHubRelease(apiToken, details, file) {
         tag_name: details.version,
         name: `Optimized + ${details.version}`,
         body: details.description,
+        make_latest: "false"
       }),
     },
   );
@@ -48,7 +69,9 @@ export async function createGitHubRelease(apiToken, details, file) {
     );
 
     if (assetReq.status != 201) {
-      console.log(`[GITHUB] Failed to create a Release Asset! ${assetReq.statusText}`);
+      console.log(
+        `[GITHUB] Failed to create a Release Asset! ${assetReq.statusText}`,
+      );
       console.log(`[GITHUB] Error: ${await assetReq.text()}`);
     } else {
       console.log(`[GITHUB] Uploaded a Asset to the created Release!`);

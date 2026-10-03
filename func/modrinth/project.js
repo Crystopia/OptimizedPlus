@@ -16,14 +16,14 @@ export async function getProject(name) {
 
 export async function checkForVersion(name, gameVersion) {
   const project = await getProject(name);
-  if (!project.verions.includes(gameVersion)) return { success: false };
+  if (!project.verions?.includes(gameVersion)) return { success: false };
 
   return { success: true };
 }
 
 export async function checkModLoader(name, loader) {
   const project = await getProject(name);
-  if (!project.loaders.includes(loader)) return { success: false };
+  if (!project.loaders?.includes(loader)) return { success: false };
 
   return { success: true };
 }

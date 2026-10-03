@@ -1,0 +1,2 @@
+preferredGraphicsBackend:"opengl"
+guiScale:2

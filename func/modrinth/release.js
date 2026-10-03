@@ -9,7 +9,27 @@ export async function createModrinthRelease(apiToken, details, file) {
     if (release.version_number == details.versionNumber) return true;
     else return false;
   });
-  if (hasRelease.includes(true))
+
+  if (details.deleteOld) {
+    const release = checkForReleaseJson.filter(
+      (release) => release.version_number == details.versionNumber,
+    )[0];
+    if (release) {
+      const deleteReq = await fetch(
+        `${MODRINTH_API_BASE}/version/${release.id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: apiToken,
+          },
+        },
+      );
+      if (deleteReq.status != 200) {
+        console.log(`[MODRINTH] Filed to delete Release. ${deleteReq.statusText}`);
+      }
+      console.log("[MODRINTH] Successfully deleted old Release.");
+    }
+  } else if (hasRelease.includes(true))
     return console.log("[MODRINTH] Failed to create Release! Version exsits.");
 
   const data = {
@@ -39,9 +59,13 @@ export async function createModrinthRelease(apiToken, details, file) {
     body: formData,
   });
   if (req.status != 200) {
-    console.log(`[MODRINTH] Failed to create Modrinth Version Release ${req.statusText}`);
+    console.log(
+      `[MODRINTH] Failed to create Modrinth Version Release ${req.statusText}`,
+    );
     console.log(await req.text());
   } else {
-    console.log(`[MODRINTH] Successfully created Modrinth Version. https://modrinth.com/project/${details.projectId}/version/${details.versionNumber}`);
+    console.log(
+      `[MODRINTH] Successfully created Modrinth Version. https://modrinth.com/project/${details.projectId}/version/${details.versionNumber}`,
+    );
   }
 }

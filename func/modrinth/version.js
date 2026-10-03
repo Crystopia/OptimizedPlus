@@ -21,14 +21,18 @@ export async function getFirstVersionForLoaderAndVersion(
   const json = (await req.json())[0];
   const project = await getProject(name);
 
+  if (json.files[0] == null || json.files[0].url == null) {
+    return { success: false };
+  }
+
   return {
     success: true,
     fileHashes: {
       sha1: json.files[0].hashes.sha1,
       sha512: json.files[0].hashes.sha512,
     },
-    client_side: project.client_side,
-    server_side: project.server_side,
+    clientSide: project.client_side,
+    serverSide: project.server_side,
     fileSize: json.files[0].size,
     url: json.files[0].url,
     fileName: json.files[0].filename,

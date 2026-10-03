@@ -3,16 +3,17 @@ import fs from "fs";
 
 export async function buildMrPackContent(files) {
   return files.map((file) => {
-    return {
-      downloads: [file.url],
-      env: { client: file.client_side, server: file.server_side },
-      fileSize: file.fileSize,
-      hashes: {
-        sha1: file.fileHashes.sha1,
-        sha512: file.fileHashes.sha512,
-      },
-      path: `mods/${file.fileName}`,
-    };
+    if (file != undefined && file.success)
+      return {
+        downloads: [file.url],
+        env: { client: file.clientSide, server: file.serverSide },
+        fileSize: file.fileSize,
+        hashes: {
+          sha1: file.fileHashes.sha1,
+          sha512: file.fileHashes.sha512,
+        },
+        path: `mods/${file.fileName}`,
+      };
   });
 }
 
@@ -27,7 +28,7 @@ export async function generateMrPackJson(
       "fabric-loader": loaderVersion,
       minecraft: mcVersion,
     },
-    files: filesJson,
+    files: filesJson.filter((f) => f != null && f != undefined),
     formatVersion: 1,
     game: "minecraft",
     name: `Optimized + - ${releaseVersion}`,
@@ -51,8 +52,6 @@ export async function createMrPackFile(fileName, json, configDir) {
 
   const zipFile = await zip.generateAsync({ type: "blob" });
 
-  console.log(
-      `[MRPACK] Created a .mrpack file for ModPack.`,
-    );
+  console.log(`[MRPACK] Created a .mrpack file for ModPack.`);
   return new File(await zipFile.arrayBuffer(), fileName);
 }

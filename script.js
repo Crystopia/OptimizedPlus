@@ -1,7 +1,4 @@
-import {
-  checkForVersion,
-  checkModLoader,
-} from "./func/modrinth/project";
+import { checkForVersion, checkModLoader } from "./func/modrinth/project";
 import { getFirstVersionForLoaderAndVersion } from "./func/modrinth/version";
 import {
   buildMrPackContent,
@@ -16,7 +13,7 @@ import { MODRINTH_PROJECT_ID } from "./static";
 export async function init() {
   const json = JSON.parse(fs.readFileSync("./data/versions.json"));
 
-  Object.values(json).forEach((version) => {
+  Object.values(json).map((version) => {
     Object.values(version).forEach(async (versionFile, index) => {
       const versionName = Object.keys(version)[index];
       const versionData = JSON.parse(fs.readFileSync(versionFile));
@@ -61,7 +58,8 @@ export async function init() {
         await createGitHubRelease(
           process.env.GITHUB_API_TOKEN,
           {
-            version: "26.3",
+            deleteOld: versionData.deleteOld,
+            version: versionName,
             description: changelog,
           },
           mrpack,
@@ -70,6 +68,7 @@ export async function init() {
         await createModrinthRelease(
           process.env.MODRINTH_API_TOKEN,
           {
+            deleteOld: versionData.deleteOld,
             name: versionData.name,
             loaders: [versionData.mcModLoader],
             versionType: versionData.publishType,
