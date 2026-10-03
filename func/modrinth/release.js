@@ -14,6 +14,7 @@ export async function createModrinthRelease(apiToken, details, file) {
     const release = checkForReleaseJson.filter(
       (release) => release.version_number == details.versionNumber,
     )[0];
+
     if (release) {
       const deleteReq = await fetch(
         `${MODRINTH_API_BASE}/version/${release.id}`,
@@ -25,7 +26,9 @@ export async function createModrinthRelease(apiToken, details, file) {
         },
       );
       if (deleteReq.status != 200) {
-        console.log(`[MODRINTH] Filed to delete Release. ${deleteReq.statusText}`);
+        console.log(
+          `[MODRINTH] Filed to delete Release. ${deleteReq.statusText}`,
+        );
       }
       console.log("[MODRINTH] Successfully deleted old Release.");
     }
